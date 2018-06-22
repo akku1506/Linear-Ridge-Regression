@@ -29,5 +29,29 @@ For example, represent female as (1, 0, 0), infant as (0, 1, 0) and male as (0, 
 
 10. So far we have been looking at only the mean squared error. We might also be interested in understanding the contribution of each prediction towards the error. Maybe the error is due to a few samples with huge errors and all others have tiny errors. One way to visualize this information is to a plot of predicted versus actual values. Use the best choice for the training fraction and λ, make two graphs corresponding to the training and testing set. The X and Y axis in these graphs will correspond to the predicted and actual target values respectively. If the model is good, then all the points will be close to a 45-degree line through the plot.
 
+## Files and its usage
+
+Linear_reg.m : Start the execution with this file .
+
+Read_format.m: It delete the first column containing characters and insert three more columns to
+code the corresponding values as in column one.
+
+Frac_norm.m: it partitions the data into training and testing sets according to the value of the ‘frac’
+passed and normalises the data.
+
+Error_cal.m: it calculates the training error and testing error by internally calling following functions:-
+ Mylinridgereg.m : calculates the weights.
+ Mylinridgeregeval.m: predicts the target label.
+ Meansquarederr.m: calculate mean square error.
+
+Remove_attrib.m: it removes the least weighted attributes from the dataset and then calculate the
+error.
+
+Iterations.m: It calculates the mean training error and testing error for the dataset over 100
+iterations for each combo of fraction and lambda.
+
+Dummy.m: It finds the minimum testing error for each fraction and finds the lambda value for which
+we are getting these minimum values.
+
 ### References:
 http://archive.ics.uci.edu/ml/datasets/Abalone	
